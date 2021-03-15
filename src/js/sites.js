@@ -37,6 +37,7 @@ const defaultSites = {
   'El Periodico': 'elperiodico.com',
   'Elu24': 'elu24.ee',
   'Encyclopedia Britannica': 'britannica.com',
+  'Entrepreneur': 'entrepreneur.com',
   'Estadão': 'estadao.com.br',
   'Examiner': 'examiner.com.au',
   'Financial News': 'fnlondon.com',

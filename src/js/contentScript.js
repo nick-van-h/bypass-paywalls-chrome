@@ -591,7 +591,16 @@ if (matchDomain('elmercurio.com')) {
     const advertising = document.querySelectorAll('.advertising, amp-embed');
     removeDOMElement(...advertising);
   }
-}
+} else if (matchDomain('entrepreneur.com')) {
+  document.querySelector('.gate-check.paywall').style.height = 'auto';
+  const paywall = document.querySelector('.paywall-promo');
+  removeDOMElement(paywall);
+  document.styleSheets[0].insertRule('.gate-check.paywall:before { content: none !important; }', 0);
+  document.styleSheets[0].cssRules[0].style.content= 'none !important';
+  document.styleSheets[0].addRule('.gate-check.paywall:before { content: none !important; }', 0);
+  document.styleSheets[0].rules[0].style.content= 'none !important';
+
+} 
 
 function matchDomain (domains) {
   const hostname = window.location.hostname;
